@@ -1,4 +1,4 @@
-# Home SOC Lab - Azure SIEM with Wazuh
+# SOC Lab - Azure SIEM with Wazuh
 
 A cloud-based Security Operations Center (SOC) lab demonstrating threat detection, log analysis, and security monitoring using Wazuh SIEM deployed on Microsoft Azure.
 
