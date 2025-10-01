@@ -7,6 +7,7 @@ A cloud-based Security Operations Center (SOC) lab demonstrating threat detectio
 This project implements a functional security monitoring environment using Wazuh, an open-source SIEM platform. The lab simulates real-world attack scenarios and demonstrates the ability to detect, alert, and investigate security incidents using custom detection rules.
 
 ## Architecture
+![Architecture Diagram](Architecture-Diagram.png)
 
 **Infrastructure:**
 - 1x Ubuntu Server 22.04 VM - Wazuh Manager (SIEM + Dashboard)
@@ -32,8 +33,19 @@ This project implements a functional security monitoring environment using Wazuh
 ## Setup Summary
 
 1. Deployed Azure infrastructure with VMs in isolated VNet
+
+**Azure Setup**
+![Azure Setup](screenshots/azure-setup.png)
+
 2. Installed Wazuh Manager with all-in-one installation script
+
+**Wazuh**
+![Wazuh](screenshots/empty_dashboard.png)
+
 3. Configured Wazuh agents on Linux and Windows endpoints
+
+![Agents](screenshots/connected-agents.png)
+
 4. Established secure communication between agents and manager
 5. Enabled File Integrity Monitoring and log collection
 
@@ -68,8 +80,18 @@ Simulated credential stuffing attack by generating multiple failed authenticatio
 
 ## Key Findings
 
+![Wazuh](screenshots/siem-log.png)
+
+
 - Wazuh's built-in rules provide solid baseline detection coverage
+
+![Wazuh](screenshots/log-details.png)
+
 - Custom rules allow tuning for specific threat scenarios and reducing false positives
+
+![Wazuh](screenshots/custom-rules.png)
+
+
 - Agent-based architecture enables centralized visibility across multiple platforms
 - Real-time alerting provides immediate notification of suspicious activity
 
@@ -79,14 +101,6 @@ Simulated credential stuffing attack by generating multiple failed authenticatio
 - Windows logging requires additional tooling (Sysmon) for meaningful security visibility
 - Azure's free tier limitations (public IP quotas) require architectural adjustments
 - Detection rule tuning is essential - frequency thresholds prevent alert fatigue
-
-## Future Improvements
-
-- Implement SOAR playbooks for automated incident response
-- Add additional detection rules for lateral movement and privilege escalation
-- Configure Windows event log forwarding for deeper endpoint visibility
-- Deploy threat intelligence feeds for enhanced detection capabilities
-- Create custom dashboards for executive-level security metrics reporting
 
 ## Skills Demonstrated
 
